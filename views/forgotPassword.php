@@ -12,7 +12,7 @@
 
           <h1>Please insert your email address</h1>
 
-          <form class="gform" method = "POST" action = "https://script.google.com/macros/s/AKfycbz-Ci3MZTczfwD0vzoWaJghhTR5FTTHWtnA2hSkA_a1tNJh88c/exec">
+          <form class="gform" method = "POST" action = "https://script.google.com/a/alexwritescode.eu/macros/s/AKfycbzhQ_2b5IEk-7fhFn9Pd7x-kP2Y_v6qhr-0SeL8IQ/exec">
              <input type="email" name = "email" placeholder="Email Address"> <br>
              <button type = "submit">Send</button>
              <a href = "views/forgotPassword.php" >Forgot password?</a>
