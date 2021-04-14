@@ -10,18 +10,13 @@
 
           <img src="media/logo.jpg">
 
-          <h1>Welcome to Media Bazaar</h1>
+          <h1>Please insert your email address</h1>
 
-          <form class="box-1">
-
-             <input type="text" name = "username" placeholder="Username"> <br>
-             <input type="password" name = "password" placeholder="Password"> <br>
-             <button type = "submit">Log In</button>
-
+          <form class="gform" method = "POST" action = "https://script.google.com/macros/s/AKfycbzzjArFfBS6BYW_0AVFj6PqbIo2EaI2We7i0NapAY5aWfyP3_T1MLIn9agyxzkj_hRq/exec">
+             <input type="email" name = "email" placeholder="Email Address"> <br>
+             <button type = "submit">Send</button>
              <a href = "views/forgotPassword.php" >Forgot password?</a>
-
           </form>
-
       </center>
 
   </body>

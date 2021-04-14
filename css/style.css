@@ -3,7 +3,7 @@ body
     background-color: #4fb477;
 }
 
-.box-1
+.box-1, .gform
 {
     position: absolute;
     top: 50%;
@@ -14,7 +14,7 @@ body
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-.box-1 input, select
+.box-1 input,.box-1 select, .gform select, .gform input
 {
     border-radius: 10px;
     padding: 0.3em;
@@ -23,7 +23,9 @@ body
 
 
 .box-1 input[type=text],
-.box-1 input[type=password]
+.box-1 input[type=password],
+.gform input[type=text],
+.gform input[type=password]
 {
     border: none;
     border-bottom: 1px solid grey;
@@ -31,7 +33,8 @@ body
     outline: none;
 }
 
-.box-1 button[type=submit]
+.box-1 button[type=submit],
+.gform button[type=submit]
 {
     cursor: pointer;
 
@@ -45,7 +48,7 @@ body
     border-radius: 15px;
     width: 100%;
 }
-
+.gform button[type=submit]:hover,
 .box-1 button[type=submit]:hover
 {
     background-color: yellow;
