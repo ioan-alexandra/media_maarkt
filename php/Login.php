@@ -1,5 +1,5 @@
 <?php
-include_once("../classes/Login_Database.php");
+include_once("../classes/Login_Database.class.php");
 static $Forgot =0;
 if(($_SERVER["REQUEST_METHOD"] == "POST"))
 {
@@ -9,10 +9,10 @@ if(($_SERVER["REQUEST_METHOD"] == "POST"))
             $Login_Con = new Login_Connection();
             $Login_Details = $Login_Con->Login($Email, $Password);
             if ($Login_Details != null) {
-                header("Location: profilePage.html");
+                header("Location: ../views/profilePage.php");
             } else {
-                header("Location: index.html");
+                header("Location: ../index.php");
             }
         }
+    
 }
-?>

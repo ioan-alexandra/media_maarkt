@@ -12,7 +12,7 @@
 
           <h1>Welcome to Media Bazaar</h1>
 
-          <form class="box-1">
+          <form class="box-1" action="./php/Login.php" method="POST">
 
              <input type="text" name = "username" placeholder="Username"> <br>
              <input type="password" name = "password" placeholder="Password"> <br>

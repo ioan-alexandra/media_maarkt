@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="sidebar">
-      <img src="media/logo.jpg" />
+      <img src="../media/logo.jpg" />
       <br />
       <button><i class="fa fa-user"></i> Profile page</button> <br />
       <button><i class="fa fa-calendar"></i> Schedule</button>
@@ -19,10 +19,10 @@
 
     <form class="content">
 
-      <div class=></div>
       <img src="../media/profile.png" />
 
       <button type = "submit">Edit profile picture</button>
+      <div class="tbs">
 
       <input type="text" name="fname" placeholder="First name" />
       <input type="text" name="lname" placeholder="Last name" />
@@ -32,8 +32,8 @@
       <input type="text" name="zip" placeholder="Zip code" />
       <input type="text" name="date" placeholder="Date of birth" />
       <input type="text" name="password" placeholder="Password" />
-
-      <button><i class="fa fa-cog"></i> Edit personal info</button>
+      </div>
+      <button type = "button"><i class="fa fa-cog"></i> Edit personal info</button>
 
     </form>
 

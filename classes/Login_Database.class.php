@@ -1,5 +1,5 @@
 <?php
-include_once("database.php");
+include_once("database.class.php");
 
 class Login_Connection extends dbConnection
 {
@@ -13,15 +13,17 @@ class Login_Connection extends dbConnection
 
         $Row = $command->fetchAll(PDO::FETCH_ASSOC);
 
-        if(Count($Row) ==1)
-        {
+        if (Count($Row) == 1) {
             return $Row;
-        }
-        else
-        {
+        } else {
             return null;
         }
     }
-
+    public function Get_ID_By_Email($Email)
+    {
+        $sql = "SELECT Email FROM `users` WHERE Email = :Email";
+        $command = $this->Con->connect()->prepare($sql);
+        $command->bindValue(':Email', $Email);
+        $command->execute();
+    }
 }
-?>
