@@ -1,3 +1,8 @@
+<?php
+require '../includes/init.php';
+
+$email = $_SESSION["name"];
+?>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -5,6 +10,8 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+      <link rel="icon" type="image/png" 
+      href="../media/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   </head>
@@ -26,7 +33,7 @@
 
       <input type="text" name="fname" placeholder="First name" />
       <input type="text" name="lname" placeholder="Last name" />
-      <input type="text" name="email" placeholder="Email address" />
+      <input type="text" name="email" value = "<?php echo $email ?>"/>
       <input type="text" name="phone" placeholder="Phone number" />
       <input type="text" name="address" placeholder="Address" />
       <input type="text" name="zip" placeholder="Zip code" />

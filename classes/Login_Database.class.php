@@ -5,7 +5,7 @@ class Login_Connection extends dbConnection
 {
     public function Login($Email, $Password)
     {
-        $sql = "SELECT Email, Password FROM `users` WHERE Email = :Email AND Password = :Password";
+        $sql = "SELECT * FROM `users` WHERE Email = :Email AND Password = :Password";
         $command = $this->connect()->prepare($sql);
         $command->bindValue(':Email', $Email);
         $command->bindValue(':Password', $Password);

@@ -15,13 +15,13 @@ class ProfilePage_Connection extends dbConnection
    WHERE First_Name = :First_Name , Last_Name = :Last_Name, Email = :Email ,
     Phone_Number = :Phone_Number, Password = :Password, Birthday = :Birthday, Address  = :Address, Zip_Code = :Zip_Code ";
     $pfi = $this->connect()->prepare($sql);
-    $pfi->bindValue(' :First_Name' , $First_Name);
-    $pfi->bindValue(' :Last_Name' , $Last_Name );
-    $pfi->bindValue(' :Email' , $Email);
-    $pfi->bindValue(' :Phone_Number' , $Phone_Number);
+    $pfi->bindValue(':First_Name' , $First_Name);
+    $pfi->bindValue(':Last_Name' , $Last_Name );
+    $pfi->bindValue(':Email' , $Email);
+    $pfi->bindValue(':Phone_Number' , $Phone_Number);
     $pfi->bindValue(':Password' , $Password);
-    $pfi->bindValue(' :Birthday' , $Birthday);
-    $pfi->bindValue('  :Address' ,  $Address);
+    $pfi->bindValue(':Birthday' , $Birthday);
+    $pfi->bindValue(':Address' ,  $Address);
     $pfi->bindValue(':Zip_Code' ,  $Zip_Code);
 
     $Row = $pfi->fetchAll(PDO::FETCH_ASSOC);
