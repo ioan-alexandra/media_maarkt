@@ -1,10 +1,10 @@
 <?php
 class dbConnection
 {
-    private string $host = "remotemysql.com";
-    private string $user = "ZnNBf5yJjd";
-    private string $pwd = "f4AQMd4G3F";
-    private string $name = "ZnNBf5yJjd";
+    private $host = "remotemysql.com";
+    private $user = "ZnNBf5yJjd";
+    private $pwd = "f4AQMd4G3F";
+    private $name = "ZnNBf5yJjd";
 
     public function connect()
     {
@@ -16,7 +16,7 @@ class dbConnection
 
         return $pdo;
       } catch (PDOException $e) {
-        echo "Connection Failed: " .$e->getMessage()
+        echo "Connection Failed: " .$e->getMessage();
       }
     }
 }

@@ -1,6 +1,6 @@
 <?php
-include_once("./Database/ProfilePage_Database.php");
-include_once("./Web_application/Login.php")
+include_once("../classes/ProfilePage_Database.php");
+include_once("../classes/Login.php");
 static $Forgot = 0;
 
 if(($_SERVER ['REQUEST_METHOD']== "POST"))

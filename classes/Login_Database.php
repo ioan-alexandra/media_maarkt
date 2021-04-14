@@ -1,19 +1,12 @@
 <?php
 include_once("database.php");
 
-class Login_Connection
+class Login_Connection extends dbConnection
 {
-    private dbConnection $Con;
-
-    public function __construct()
-    {
-        $this->Con = new dbConnection();
-    }
-
     public function Login($Email, $Password)
     {
         $sql = "SELECT Email, Password FROM `users` WHERE Email = :Email AND Password = :Password";
-        $command = $this->Con->connect()->prepare($sql);
+        $command = $this->connect()->prepare($sql);
         $command->bindValue(':Email', $Email);
         $command->bindValue(':Password', $Password);
         $command->execute();
@@ -29,8 +22,6 @@ class Login_Connection
             return null;
         }
     }
-
-
 
 }
 ?>
