@@ -1,0 +1,190 @@
+body
+{
+    background-color: #4fb477;
+}
+
+.box-1
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.box-1 input, select
+{
+    border-radius: 10px;
+    padding: 0.3em;
+    margin-bottom: 25px;
+}
+
+
+.box-1 input[type=text],
+.box-1 input[type=password]
+{
+    border: none;
+    border-bottom: 1px solid grey;
+    background-color: transparent;
+    outline: none;
+}
+
+.box-1 button[type=submit]
+{
+    cursor: pointer;
+
+    border: 1px;
+    height: 40px;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    background-color: black;
+
+    border-radius: 15px;
+    width: 100%;
+}
+
+.box-1 button[type=submit]:hover
+{
+    background-color: yellow;
+    color: black;
+}
+
+
+::placeholder
+{
+    color: black;
+    padding: 45;
+}
+
+.sidebar
+{
+    position: relative;
+    width: 19%;
+    height: 90%;
+    margin-top: 2.5%;
+
+    float: left;
+}
+
+.sidebar button
+{
+    display: inline-block;
+    cursor: pointer;
+
+    margin-top: 15%;
+    margin-left: 15%;
+
+    width: 70%;
+    height: 30px;
+    font-size: 15px;
+
+    border: 1px;
+    height: 40px;
+    outline: none;
+    background-color: yellow;
+    color: black;
+    
+    border-radius: 15px;    
+
+}
+
+.sidebar button[type=button]
+{
+    margin-top: 100%
+}
+
+.sidebar img
+{
+    float: left;
+    margin-left: 30%;
+}
+
+.sidebar button:hover
+{
+    color: #fff;
+    background-color: black;
+}
+
+
+.content
+{
+    position: relative;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 2.5%;
+    height: 90%;
+    width: 80%;
+    float: right;
+}
+
+.content button
+{
+    display: inline-block;
+    height: 30px;
+    font-size: 15px;
+    cursor: pointer;
+
+    border: 1px;
+    height: 40px;
+    outline: none;
+    color: #fff;
+    background-color: black;
+    border-radius: 15px;    
+}
+
+.content button:hover
+{
+    background-color: yellow;
+    color: black;
+}
+
+.content img
+{
+    max-height: 150px;
+    max-width: 200px;
+    margin-left: 85%;
+    margin-top: 2%;
+    border-radius: 10px;
+}
+
+.content button[type=submit]
+{
+    margin-left: 85%;
+    margin-top: 0.5em;
+    width: 150px;
+    
+}
+
+
+.content button[type=button]
+{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+}
+.tbs
+{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin-left: 20px;
+}
+
+.tbs input
+{
+    border-radius: 5px;
+    border-bottom: 1px solid grey;
+    background-color: transparent;
+    width: 45%;
+    padding: 0.3em;
+    margin-bottom: 25px;
+    margin-left: 25px;
+}
+
