@@ -14,7 +14,7 @@
       <br />
       <button><i class="fa fa-user"></i> Profile page</button> <br />
       <button><i class="fa fa-calendar"></i> Schedule</button>
-      <button type="button"><span class="iconify" data-icon="fa-solid:door-open" data-inline="false"></span> Log out</button>
+      <a href = "../php/logout.php"> <button type="button"><span class="iconify" data-icon="fa-solid:door-open" data-inline="false"></span> Log out</button></a>
     </div>
 
     <form class="content">
