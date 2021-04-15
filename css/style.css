@@ -153,7 +153,7 @@ body
     border-radius: 10px;
 }
 
-.content button[type=submit]
+.content .sbmt
 {
     margin-left: 85%;
     margin-top: 0.5em;
@@ -161,7 +161,7 @@ body
     
 }
 
-.content button[type=button]
+.content .btn
 {
     position: absolute;
     top: 80%;

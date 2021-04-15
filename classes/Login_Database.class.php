@@ -19,11 +19,5 @@ class Login_Connection extends dbConnection
             return null;
         }
     }
-    public function Get_ID_By_Email($Email)
-    {
-        $sql = "SELECT Email FROM `users` WHERE Email = :Email";
-        $command = $this->Con->connect()->prepare($sql);
-        $command->bindValue(':Email', $Email);
-        $command->execute();
-    }
+    
 }
