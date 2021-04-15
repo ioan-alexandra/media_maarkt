@@ -2,35 +2,37 @@
 require 'includes/init.php';
 ?>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="icon" type="image/png" 
-      href="media/favicon.ico">
-  </head>
-  <body>
-      <center>
 
-          <img src="media/logo.jpg">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" type="image/png" href="media/favicon.ico">
+</head>
 
-          <h1>Welcome to Media Bazaar</h1>
+<body>
+  <center>
 
-          <form class="box-1" action="./php/Login.php" method="POST">
+    <img src="media/logo.jpg">
 
-             <input type="text" name = "username" placeholder="Username"> <br>
-             <input type="password" name = "password" placeholder="Password"> <br>
-             <button type = "submit">Log In</button>
+    <h1>Welcome to Media Bazaar</h1>
 
-             <a href = "views/forgotPassword.php" >Forgot password?</a>
+    <form class="box-1" action="./php/Login.php" method="POST">
 
-          </form>
+      <input type="text" name="username" placeholder="Username"> <br>
+      <input type="password" name="password" placeholder="Password"> <br>
+      <button type="submit">Log In</button>
+      <?php if (isset($_SESSION['error'])) {
+        $error = $_SESSION['error'];
+        echo "<span>$error</span>";
+      } ?>
+      <a href="views/forgotPassword.php">Forgot password?</a>
 
-      </center>
+    </form>
 
-  </body>
+  </center>
 
-  </html>
+</body>
 
-  
+</html>

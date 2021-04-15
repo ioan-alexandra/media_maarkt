@@ -1,9 +1,8 @@
 <?php
 require '../includes/init.php';
-require '../classes/Login_Database.class.php';
-require '../classes/ProfilePage_Database.php';
+require '../classes/user.class.php';
 
-$test = new ProfilePage_Connection();
+$test = new UserDB();
 $email = $_SESSION["name"];
 $user = $test ->getUserData($email);
 ?>
@@ -40,11 +39,14 @@ $user = $test ->getUserData($email);
       <input type="text" name="address" value = "<?php echo $user['Address'] ?>" />
       <input type="text" name="number" value = "<?php echo $user['House_Number'] ?>" />
       <input type="text" name="zip" value = "<?php echo $user['Zip_Code'] ?>" />
-      <input type="text" name="date" value = "<?php echo $user['Birthday'] ?>" disabled/>
+      <input type="date" name="date" value = "<?php echo $user['Birthday'] ?>" disabled/>
       <input type="text" name="password" value = "<?php echo $user['Password'] ?>" />
       </div>
       <button class ="btn" type = "submit"><i class="fa fa-cog"></i> Edit personal info</button>
-
+      <?php if (isset($_SESSION['update'])) {
+        $update = $_SESSION['update'];
+        echo "<span class='update'>$update</span>";
+      } ?>
     </form>
 
   </body>

@@ -18,10 +18,10 @@ require '../includes/init.php';
 
           <h1>Please insert your email address</h1>
 
-          <form class="box-1" method = "POST" action = "https://script.google.com/macros/s/AKfycbzot5SP2KTQ_jsa7ypH5hnCr6UpCEl0GPiMJlwd4tI7n7veFlze/exec">
+          <form class="box-1" method = "POST" action = "">
              <input type="email" name = "email" placeholder="Email Address"> <br>
              <button type = "submit">Send</button>
-             <a href = "views/forgotPassword.php" >Forgot password?</a>
+             <a href = "../index.php" >Back to login</a>
           </form>
       </center>
 
