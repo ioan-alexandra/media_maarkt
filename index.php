@@ -1,5 +1,10 @@
 <?php
 require 'includes/init.php';
+if(isset($_SESSION["Mode"]))
+{
+  unset($_SESSION["E_Pass"]);
+  unset($_SESSION["Mode"]);
+}
 ?>
 <html>
 

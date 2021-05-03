@@ -30,22 +30,27 @@ class UserDB extends dbConnection
         return $result;
     }
 
-    function updateUserData($email, $phone, $address, $zip, $house, $pass)
+    function updateUserData($email, $phone, $address, $zip, $house, $pass, $gender)
     {
 
-        $sql = 'UPDATE users SET Phone_Number = :phone , Address = :adress, Zip_Code = :zip, House_Number = :house, Password = :password WHERE Email = :email ';
+        $sql = 'UPDATE users SET Phone_Number = :phone , Address = :adress, Zip_Code = :zip, House_Number = :house, Password = :password , Gender = :gender WHERE Email = :email ';
         $sth = $this->connect()->prepare($sql);
-        $sth->execute([':email' => $email, ':adress' => $address, ':phone' => $phone, ':zip' => $zip, ':house' => $house, ':password' => $pass]);
+        $sth->execute([':email' => $email, ':adress' => $address, ':phone' => $phone, ':zip' => $zip, ':house' => $house, ':password' => $pass, ':gender' => $gender]);
     }
 
-    public function setAllUser($First_Name, $Last_Name, $Email,  $Phone_Number, $Password,  $Birthday,  $Address, $Zip_Code)
+    public function setAllUser($First_Name, $Last_Name, $Email,  $Phone_Number, $Password,  $Birthday, $Gender, $BSN,  $Address, $Zip_Code, $First_Day, $Last_Day)
     {
-        $sql = "INSERT INTO users( First_Name, Last_Name, Email, Phone_Number, Password, Birthday, Address, Zip_Code) VALUES (?, ?, ?, ?, ?, ?, ?, ? )";
+        $sql = "INSERT INTO users( First_Name, Last_Name, Email, Phone_Number, Password, Birthday, Gender, Role, BSN ,Address, Zip_Code, First_Day, Last_Day) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )";
         $pfi = $this->connect()->prepare($sql);
-        $pfi->execute([$First_Name, $Last_Name, $Email,  $Phone_Number, $Password,  $Birthday,  $Address, $Zip_Code]);
+        $pfi->execute([$First_Name, $Last_Name, $Email,  $Phone_Number, $Password,  $Birthday, $Gender, $BSN,  $Address, $Zip_Code, $First_Day, $Last_Day ]);
+    }
+    function updateUserPassword($email,$password)
+    {
+      $sql = 'UPDATE users SET Password = :password WHERE Email = :email ';
+      $sth = $this->connect()->prepare($sql);
+      $sth->execute([':email' => $email,':password' => $password]);
     }
 
-    
     /*public function GetLoginInfo(){  //Link profile info to Loginpgae
   return $this-> $Email, $this-> $Password
 } */

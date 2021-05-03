@@ -89,8 +89,8 @@ body
     outline: none;
     background-color: yellow;
     color: black;
-    
-    border-radius: 15px;    
+
+    border-radius: 15px;
 
 }
 
@@ -119,11 +119,11 @@ body
     background-color: rgba(255, 255, 255, 0.3);
     margin-top: 2.5%;
     height: 90%;
-    width: 80%;
+    width: 100%;
     float: left;
 }
 
-.content button
+.flex-right button, .flex-left button
 {
     display: inline-block;
     height: 30px;
@@ -135,47 +135,37 @@ body
     outline: none;
     color: #fff;
     background-color: black;
-    border-radius: 15px;    
+    border-radius: 15px;
 }
 
-.content button:hover
+.flex-right button:hover, .flex-left  button:hover
 {
     background-color: yellow;
     color: black;
 }
 
-.content img
+.flex-right img
 {
     max-height: 150px;
     max-width: 200px;
-    margin-left: 85%;
     margin-top: 2%;
     border-radius: 10px;
 }
 
-.content .sbmt
+.flex-right .sbmt
 {
-    margin-left: 85%;
     margin-top: 0.5em;
     width: 150px;
-    
+
 }
 
-.content .btn
+.flex-left .btn
 {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 25%;
 }
 .tbs
 {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
+    margin-top: 5%;
     margin-left: 20px;
 }
 
@@ -194,4 +184,20 @@ body
     position: absolute;
     left: 4%;
 }
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;    
+    flex-direction: row;  /* make main axis vertical */
 
+}
+.flex-left{
+    width: 100%;
+}
+.flex-right{
+    margin-left: 2%; 
+    width: 100%;
+
+}

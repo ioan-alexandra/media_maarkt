@@ -26,28 +26,36 @@ $user = $test ->getUserData($email);
       <button><i class="fa fa-calendar"></i> Schedule</button>
       <a href = "../php/logout.php"> <button type="button"><span class="iconify" data-icon="fa-solid:door-open" data-inline="false"></span> Log out</button></a>
     </div>
+    <div class="flex-container">
+      <div class="flex-left">
+        <form class="content" action = "../php/update.php" method = "POST" >      
+          <div class="tbs">
+            Name:<input type="text" name="name" value = "<?php echo $user['First_Name']; echo " "; echo $user['Last_Name'];?>" disabled/><br>
+            Email:<input type="email" name="Email" value = "<?php echo $user['Email'] ?>" /><br>
+            Phone:<input type="text" name="phone" value = "<?php echo $user['Phone_Number'] ?>" /><br>
+            Adress:<input type="text" name="address" value = "<?php echo $user['Address'] ?>" /><br>
+            HouseNumber:<input type="text" name="number" value = "<?php echo $user['House_Number'] ?>" /><br>
+            Zip Code:<input type="text" name="zip" value = "<?php echo $user['Zip_Code'] ?>" /><br>
+            Birthday:<input type="date" name="date" value = "<?php echo $user['Birthday'] ?>" disabled/><br>
+            Password:<input type="text" name="password" value = "<?php echo $user['Password'] ?>" /><br>
+            Gender:<input type ="text" name = "gender" value ="<?php echo $user['Gender'] ?>" /> <br>
+            Role:<input type ="text" name = "role" value =" <?php echo $user['Role'] ?>" disabled /> <br>
+            BSN:<input type ="text" name = "bsn" value =" <?php echo $user['BSN'] ?>"disabled /> <br>
+            Contract :<input type ="text" name= "contract" value =" <?php echo $user['First_Day']; echo " - "; echo $user['Last_Day']  ?>" disabled/> <br>
+          <button class ="btn" type = "submit"><i class="fa fa-cog"></i> Edit personal info</button><br>
+          </div>
 
-    <form class="content" action = "../php/update.php" method = "POST" >
-
-      <img src="../media/profile.png" />
-
-      <button class = "sbmt" type = "submit">Edit profile picture</button>
-      <div class="tbs">
-      <input type="text" name="fname" value = "<?php echo $user['First_Name']; echo " "; echo $user['Last_Name'];?>" disabled/>
-      <input type="text" name="email" value = "<?php echo $user['Email'] ?>" disabled/>
-      <input type="text" name="phone" value = "<?php echo $user['Phone_Number'] ?>" />
-      <input type="text" name="address" value = "<?php echo $user['Address'] ?>" />
-      <input type="text" name="number" value = "<?php echo $user['House_Number'] ?>" />
-      <input type="text" name="zip" value = "<?php echo $user['Zip_Code'] ?>" />
-      <input type="date" name="date" value = "<?php echo $user['Birthday'] ?>" disabled/>
-      <input type="text" name="password" value = "<?php echo $user['Password'] ?>" />
+          <?php /* if (isset($_SESSION['update'])) {
+            $update = $_SESSION['update'];
+            echo "<span class='update'>$update</span>";
+          }*/ ?>
+        </form>
       </div>
-      <button class ="btn" type = "submit"><i class="fa fa-cog"></i> Edit personal info</button>
-      <?php if (isset($_SESSION['update'])) {
-        $update = $_SESSION['update'];
-        echo "<span class='update'>$update</span>";
-      } ?>
-    </form>
-
+      <div class="flex-right">
+        <img src="../media/profile.png" /><br>
+        <button class = "sbmt" type = "submit">Edit profile picture</button>
+      </div>
+    </div>
+  
   </body>
 </html>
