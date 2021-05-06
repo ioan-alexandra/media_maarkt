@@ -45,11 +45,35 @@ $user = $test ->getUserData($email);
           <button class ="btn" type = "submit"><i class="fa fa-cog"></i> Edit personal info</button><br>
           </div>
 
+<<<<<<< HEAD
           <?php /* if (isset($_SESSION['update'])) {
             $update = $_SESSION['update'];
             echo "<span class='update'>$update</span>";
           }*/ ?>
         </form>
+=======
+    <form class="content" action = "../php/update.php" method = "POST" >
+
+      <img src="../media/profile.png" />
+
+      <button class = "sbmt" type = "submit">Edit profile picture</button>
+      <div class="tbs">
+      First Name:<input type="text" name="fname" value = "<?php echo $user['First_Name']; echo " "; echo $user['Last_Name'];?>" disabled/><br>
+      Email:<input type="text" name="email" value = "<?php echo $user['Email'] ?>" disabled/><br>
+      Phone:<input type="text" name="phone" value = "<?php echo $user['Phone_Number'] ?>" /><br>
+      Adress:<input type="text" name="address" value = "<?php echo $user['Address'] ?>" /><br>
+      HouseNumber:<input type="text" name="number" value = "<?php echo $user['House_Number'] ?>" /><br>
+      Zip Code:<input type="text" name="zip" value = "<?php echo $user['Zip_Code'] ?>" /><br>
+      Birthday:<input type="date" name="date" value = "<?php echo $user['Birthday'] ?>" disabled/><br>
+      Password:<input type="text" name="password" value = "<?php echo $user['Password'] ?>" /><br>
+      Gender:<input type ="text" name"gender" value ="<?php echo $user['Gender'] ?>" /> <br>
+      Role:<input type ="text" name"role" value =" <?php echo $user['Role'] ?>" disabled/> <br>
+      BSN:<input type ="text" name"bsn" value =" <?php echo $user['BSN'] ?>"disabled/> <br>
+      First_Day:<input type ="text" name"fday" value =" <?php echo $user['First_Day'] ?>" disabled/> <br>
+      Last_Day:<input type ="text" name"lday" value =" <?php echo $user['Last_Day'] ?>"disabled/> <br>
+
+
+>>>>>>> Kenneth
       </div>
       <div class="flex-right">
         <img src="../media/profile.png" /><br>

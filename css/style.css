@@ -184,6 +184,7 @@ body
     position: absolute;
     left: 4%;
 }
+<<<<<<< HEAD
 .flex-container{
     display: flex;
     justify-content: center;
@@ -201,3 +202,33 @@ body
     width: 100%;
 
 }
+=======
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.container{
+  font-family: 'Noto Sans', sans serif;
+  margin-top: 80px
+}
+th{
+  height: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+td{
+  height: 100px;
+}
+.today{
+  backgorund: blue;
+}
+th:nth-of-type(7), td:nth of type(7){
+  color: yellow;
+}
+th:nth-of-type(1), td:nth of type(1){
+  color: yellow;
+}
+</style>
+>>>>>>> Kenneth
